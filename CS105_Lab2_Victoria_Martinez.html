@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+
+    <title>Dodeca-V-Dron</title>
+    <script src="p5.js"></script>
+</head>
+<body>
+
+
+<script>
+"use strict";
+
+var words = ["No way Jose!", "Don't kid yourself...", "Amen to that!", "You know Siri is smarter than me, right?", "Okay, Google...", "That's the smartest thing you've asked all day! :)", "Wait for it... Wait, what'd you say?", "Just do it!", "You talk too much...", "Hey! Don't manhandle me!", "I like it the way it is", "I cannot be trusted with these kinds of questions"];
+var word;
+
+function setup()
+{
+  createCanvas(800, 800);
+
+  background(220,220,220);
+  word = random(words); // select random word
+}
+
+
+function draw()
+{
+  fill(0, 0, 0);
+  //ellipse(centerX, centerY, width, height);
+  ellipse(400, 400, 500, 500); // 8ball
+
+  noStroke();
+  fill(0, 20, 40);
+  ellipse(400, 400, 200, 200);
+  triangle(275, 475, 400, 255, 525, 475);
+
+    // Get a random element from an array using the random(Array) syntax
+    fill(255, 255, 255);
+
+    textSize(20);
+
+    if(word === "You know Siri is smarter than me, right?")
+    {
+        text("You know Siri", 340, 380); // draw the word
+        text("is smarter than me,", 316, 410); // draw the word
+        text("right?", 376, 440);
+    }
+    else if(word === "Don't kid yourself...")
+    {
+        text("Don't kid", 360, 390); // draw the word
+        text("yourself...", 359, 420); // draw the word
+    }
+    else if(word === "No way Jose!")
+    {
+        text("No way Jose!", 344, 408);
+    }
+    else if(word === "Just do it!")
+    {
+        text("Just do it!", 355, 408);
+    }
+    else if(word === "Okay, Google...")
+    {
+        text("Okay, Google...", 332, 408);
+    }
+    else if(word === "You talk too much...")
+    {
+        text("You talk too much...", 314, 408);
+    }
+    else if(word === "That's the smartest thing you've asked all day! :)")
+    {
+        text("That's the smartest", 315, 378);
+        text("thing you've asked", 318, 408);
+        text("all day! :)", 363, 438);
+    }
+    else if(word === "Wait for it... Wait, what'd you say?")
+    {
+        text("Wait for it...", 354, 378);
+        text("Wait,", 380, 408);
+        text("what'd you say?", 330, 438);
+    }
+    else if(word === "Hey! Don't manhandle me!")
+    {
+        text("Hey!", 379, 390);
+        text("Don't manhandle me!", 306, 420);
+    }
+    else if(word === "I like it the way it is")
+    {
+        text("I like it", 371, 390);
+        text("the way it is", 348, 420);
+    }
+    else if(word === "I cannot be trusted with these kinds of questions")
+    {
+        text("I cannot be", 354, 378);
+        text("trusted with these", 323, 408);
+        text("kinds of questions", 321, 438);
+    }
+    else
+    {
+        text(word, 342, 408); // draw the word
+    }
+}
+
+
+</script>
+</body>
+</html>
